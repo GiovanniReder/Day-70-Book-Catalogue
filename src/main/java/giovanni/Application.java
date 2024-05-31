@@ -13,8 +13,8 @@ public class Application {
     public static void main(String[] args) {
         List<Book> bookList = new ArrayList<>();
         List<Magazine> magazineList= new ArrayList<>();
-        List<Object> Archivio = new ArrayList<>();
-        Archive Archivio2= new Archive();
+
+        Archive Archivio= new Archive();
 
 //CREAZIONE LIBRI
         Book book1 = new Book("Horror", "Steven King", 700,2000, 123456789, "IT");
@@ -35,22 +35,13 @@ magazineList.add(magazine1);
 magazineList.add(magazine2);
 magazineList.add(magazine3);
 //AGGIUNGO LE LISTE DI LIBRI E RIVISTE DENTRO UN UNICA LISTA ARCHIVIO
-        Archivio.addAll(bookList);
-        Archivio.addAll(magazineList);
-/*
-Archivio2.addBook(book1);
-Archivio2.addBook(book2);
-Archivio2.addBook(book3);
-Archivio2.addMagazine(magazine1);
-Archivio2.addMagazine(magazine2);
-Archivio2.addMagazine(magazine3);
-Archivio2.addNewBookOrMagazine(book1);
-Archivio2.addNewBookOrMagazine(book2);
-Archivio2.addNewBookOrMagazine(book3);
-Archivio2.addNewBookOrMagazine(magazine1);
-Archivio2.addNewBookOrMagazine(magazine2);
-Archivio2.addNewBookOrMagazine(magazine3);
-*/
+
+        Archivio.addBookOrMagazine(book1);
+        Archivio.addBookOrMagazine(book2);
+        Archivio.addBookOrMagazine(book3);
+        Archivio.addBookOrMagazine(magazine1);
+        Archivio.addBookOrMagazine(magazine2);
+        Archivio.addBookOrMagazine(magazine3);
 
         System.out.println("------------------LISTA DEI LIBRI--------------");
         System.out.println(bookList);
