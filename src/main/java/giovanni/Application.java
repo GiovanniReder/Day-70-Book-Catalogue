@@ -4,9 +4,11 @@ import giovanni.entities.Archive;
 import giovanni.entities.Book;
 import giovanni.entities.Magazine;
 import giovanni.enums.Periodicity;
-
+import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Application {
 
@@ -44,11 +46,15 @@ magazineList.add(magazine3);
         Archivio.addBookOrMagazine(magazine3);
 
         System.out.println("------------------LISTA DEI LIBRI--------------");
-        System.out.println(bookList);
-
+       // System.out.println(bookList);
+        //LISTA LIBRI FATTA CON STREAM
+ String archivioLibri = bookList.stream().map(book -> "Title: " + book.getTitle() + " Author: " +  book.getAuthor() + " Genre: " + book.getGenre() + " Page number: " + book.getPageNumber() + " Year of pubblication: " + book.getYearOfPublication() + " ISBN: " + book.getISBN() + System.lineSeparator()).collect(Collectors.joining(", "));
+        System.out.println(archivioLibri);
         System.out.println("------------------LISTA DELLE RIVISTE--------------");
-        System.out.println(magazineList);
-
+       // System.out.println(magazineList);
+        //LISTA RIVISTE FATTA CON STREAM
+        String archivioRiviste = magazineList.stream().map(magazine -> "Title: " + magazine.getTitle()  + " Page number: " + magazine.getPageNumber() + " Year of pubblication: " + magazine.getYearOfPublication() + " Periodicity: " + magazine.getPeriodicity() + " ISBN: " + magazine.getISBN() + System.lineSeparator()).collect(Collectors.joining(", "));
+        System.out.println(archivioRiviste);
         System.out.println("------------------ARCHIVIO--------------");
         System.out.println(Archivio);
 
@@ -60,6 +66,8 @@ magazineList.add(magazine3);
         Archivio.removeByISBN(245634846);
 
         System.out.println(Archivio);
+
+
 
         System.out.println("--------------RICERCO UN BOOK E UN MAGAZINE DALL' ARCHIVIO TRAMITE ISBN------------------");
         System.out.println(Archivio.searchByISBN(979128137));
