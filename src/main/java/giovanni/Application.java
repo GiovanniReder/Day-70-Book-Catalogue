@@ -68,7 +68,7 @@ magazineList.add(magazine3);
         System.out.println(Archivio.searchByYearOfPublication(2012));
 
         System.out.println("--------------RICERCO UN BOOK DALL'ARCHIVIO TRAMITE AUTHOR------------------");
-        System.out.println(Archivio.searchByAuthor("Sylvia Brown"));
+        System.out.println(Archivio.searchByAuthor("Dario Bressanini"));
 
 
 

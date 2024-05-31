@@ -68,7 +68,7 @@ public class Archive {
                     }
                     return false;
                 })
-                .collect(Collectors.toList());
+                .toList();
 
         if (resultList.size() == 1) {
             return (Book) resultList.get(0);
