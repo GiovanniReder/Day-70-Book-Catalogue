@@ -61,6 +61,20 @@ magazineList.add(magazine3);
 
         System.out.println(Archivio);
 
-        System.out.println("--------------RIMUOVO UN BOOK E UN MAGAZINE DELLA LISTA TRAMITE ISBN------------------");
+        System.out.println("--------------RICERCO UN BOOK E UN MAGAZINE DALL' ARCHIVIO TRAMITE ISBN------------------");
+        System.out.println(Archivio.searchByISBN(979128137));
+
+        System.out.println("--------------RICERCO UN BOOK E UN MAGAZINE DALL'ARCHIVIO  TRAMITE YEARSOFPUBBLICATION------------------");
+        System.out.println(Archivio.searchByYearOfPublication(2012));
+
+        System.out.println("--------------RICERCO UN BOOK DALL'ARCHIVIO TRAMITE AUTHOR------------------");
+        System.out.println(Archivio.searchByAuthor("Sylvia Brown"));
+
+
+
+
+
+
+
     }
 }
