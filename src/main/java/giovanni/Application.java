@@ -52,5 +52,15 @@ magazineList.add(magazine3);
         System.out.println("------------------ARCHIVIO--------------");
         System.out.println(Archivio);
 
+
+        System.out.println("--------------RIMUOVO UN BOOK E UN MAGAZINE DELLA LISTA TRAMITE ISBN------------------");
+        System.out.println(Archivio);
+
+        Archivio.removeByISBN(123456789);
+        Archivio.removeByISBN(245634846);
+
+        System.out.println(Archivio);
+
+        System.out.println("--------------RIMUOVO UN BOOK E UN MAGAZINE DELLA LISTA TRAMITE ISBN------------------");
     }
 }
