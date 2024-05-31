@@ -40,47 +40,24 @@ public class Book {
       return genre;
    }
 
-   public void setGenre(String genre) {
-      this.genre = genre;
-   }
-
    public String getAuthor() {
       return author;
-   }
-
-   public void setAuthor(String author) {
-      this.author = author;
    }
 
    public int getPageNumber() {
       return pageNumber;
    }
 
-   public void setPageNumber(int pageNumber) {
-      this.pageNumber = pageNumber;
-   }
-
    public int getYearOfPublication() {
       return yearOfPublication;
-   }
-
-   public void setYearOfPublication(int yearOfPublication) {
-      this.yearOfPublication = yearOfPublication;
    }
 
    public String getTitle() {
       return Title;
    }
 
-   public void setTitle(String title) {
-      Title = title;
-   }
-
    public long getISBN() {
       return ISBN;
    }
 
-   public void setISBN(long ISBN) {
-      this.ISBN = ISBN;
-   }
 }

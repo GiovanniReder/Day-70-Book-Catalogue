@@ -1,11 +1,7 @@
 package giovanni.entities;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import giovanni.entities.Book;
-import giovanni.entities.Magazine;
 
 public class Archive {
     private List<Object> archivio;
